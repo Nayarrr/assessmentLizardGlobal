@@ -1,0 +1,154 @@
+/* CategoryFilter.css - Category filter sidebar styles */
+
+.category-filter {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+/* Header */
+.category-filter__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+}
+
+.category-filter__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.category-filter__clear-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.category-filter__clear-btn:hover {
+  background: #ee5a52;
+  transform: translateY(-2px);
+}
+
+.category-filter__clear-btn:active {
+  transform: translateY(0);
+}
+
+/* Category List */
+.category-filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Category Item */
+.category-filter__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.category-filter__item:hover {
+  background: #f5f5f5;
+  transform: translateX(4px);
+}
+
+.category-filter__item--selected {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid #667eea;
+}
+
+/* Checkbox */
+.category-filter__checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+/* Label */
+.category-filter__label {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.category-filter__item--selected .category-filter__label {
+  font-weight: 600;
+  color: #667eea;
+}
+
+/* Count */
+.category-filter__count {
+  font-size: 0.875rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.category-filter__item--selected .category-filter__count {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Scrollbar Styling */
+.category-filter::-webkit-scrollbar {
+  width: 8px;
+}
+
+.category-filter::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.category-filter::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.category-filter::-webkit-scrollbar-thumb:hover {
+  background: #5568d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-filter {
+    position: static;
+    max-height: none;
+  }
+
+  .category-filter__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .category-filter__clear-btn {
+    width: 100%;
+  }
+
+  .category-filter__list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}

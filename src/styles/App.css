@@ -1,0 +1,177 @@
+/* App.css - Main application styles */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+}
+
+/* Header Styles */
+.app__header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.app__header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.app__title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.5rem 0;
+}
+
+.app__subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Author Section */
+.app__author {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 12px;
+  border: 2px solid #667eea;
+  min-width: 180px;
+}
+
+.app__author-label {
+  font-size: 0.75rem;
+  color: #667eea;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.app__author-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+
+/* Main Container - Sidebar + Content Layout */
+.app__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  flex: 1;
+}
+
+/* Footer Styles */
+.app__footer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .app__container {
+    grid-template-columns: 250px 1fr;
+    gap: 1.5rem;
+  }
+
+  .app__title {
+    font-size: 2.5rem;
+  }
+
+  .app__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .app__author {
+    min-width: 150px;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .app__author-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .app__header-content {
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .app__title {
+    font-size: 2rem;
+  }
+
+  .app__subtitle {
+    font-size: 1rem;
+  }
+
+  .app__author {
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .app__author-label {
+    font-size: 0.7rem;
+  }
+
+  .app__author-name {
+    font-size: 1.15rem;
+  }
+
+  .app__footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .app__title {
+    font-size: 1.75rem;
+  }
+
+  .app__subtitle {
+    font-size: 0.95rem;
+  }
+}
